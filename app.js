@@ -1,6 +1,9 @@
 const express = require("express");
 const cors = require("cors");
-//const http = require("http");
+
+
+//add router
+const contactsRouter = require("./app/routes/contact.rote");
 
 const app = express();
 
@@ -11,4 +14,8 @@ app.get("/", (req,res) => {
     res.json({message: "Welcome to contact book application."});
 });
 
-module.express = app;
+//use router
+app.use("/api/contacts", contactsRouter);
+
+
+module.exports = app;
