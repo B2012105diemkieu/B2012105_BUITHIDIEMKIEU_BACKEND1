@@ -3,7 +3,7 @@ const cors = require("cors");
 
 
 //add router
-const contactsRouter = require("./app/routes/contact.rote");
+const contactsRouter = require("./app/routes/contact.route");
 
 //add api error
 const ApiError = require("./app/api-error");
